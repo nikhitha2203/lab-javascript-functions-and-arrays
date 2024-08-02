@@ -35,39 +35,87 @@ console.log(`Longest word is ${answer3}`);
 
 
 // Iteration #3: Calculate the sum
-const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+const numbers1 = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers(numbers) {
+function sumNumbers1(numbers1) {
   let sum=0;
-  for(let i=0;i<numbers.length;i++)
+  for(let i=0;i<numbers1.length;i++)
   {
-      sum+=numbers[i];
+      sum+=numbers1[i];
   }
   return sum;
 }
 
-let answer2 = sumNumbers(numbers);
+let answer2 = sumNumbers1(numbers1);
 console.log(`The sum is ${answer2}`);
 
 // Iteration #3.1 Bonus:
-function sum() {}
+const numbers = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
 
+function sum2(numbers) {
+  let totalSum = 0;
+  
+  for (let i = 0; i < numbers.length; i++) {
+    if (typeof numbers[i] === "string") {
+      totalSum += numbers[i].length;
+    } else if (typeof numbers[i] === "boolean") {
+      totalSum += numbers[i] ? 1 : 0;
+    } else if (typeof numbers[i] === "number") {
+      totalSum += numbers[i];
+    }
+  }
+  
+  return totalSum;
+}
+
+let answer4 = sum2(numbers);
+console.log(answer4);
 
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
-
+function averageNumbers(numbersAvg) {
+  let sum3 = 0;
+  for(let i=0;i<numbersAvg.length;i++)
+  {
+      sum3+=numbersAvg[i];
+  }
+  return sum3/numbersAvg.length;
+}
+console.log(`The average is ${averageNumbers(numbersAvg)}`);
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(wordsArr) {
+      let sum4 = 0;
+      for(let i=0;i<averageWordLength.length;i++)
+      {
+        sum4+=wordsArr[i].length;
+      }
+      console.log(sum4/wordsArr.length);
+ }
+ averageWordLength(wordsArr);
 
 // Bonus - Iteration #4.1
-function avg() {}
+ let mixArr2 =  [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+function avg(mixArr2) {
+  let sum5 = 0
+  for(let i=0;i<mixArr2.length;i++){
+  if(typeof mixArr2[i] == "string")
+    sum5+=mixArr2[i].length;
+  else if (typeof mixArr2[i] == "boolean")
+    sum5+=mixArr2[i] ? 1 : 0;
+  else if(typeof mixArr2[i] == "number")
+    sum5+=mixArr2[i];
+  return sum5 / mixArr2.length;
+}
+}
+ console.log(avg(mixArr2));
+
+
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
