@@ -15,7 +15,22 @@ console.log(`The largest of ${num1} and ${num2} is ${answer}`);
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+function findLongestWord(words) {
+  let max = words[0];
+  let maxIndex = words[0];
+  for(let i=0;i<words.length;i++)
+  {
+    if(words[i].length>max.length)
+    {
+      max  = words[i];
+      maxIndex = i;
+    }
+  }
+  return words[maxIndex];
+}
+
+const answer3 = findLongestWord(words);
+console.log(`Longest word is ${answer3}`);
 
 
 
