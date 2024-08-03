@@ -175,8 +175,18 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(wordsCount,word) {
+  let count = 0;
+  for(let i=0;i<wordsCount.length;i++)
+  {
+    if(wordsCount[i]===word)
+      count++;
+  }
+  return count;
+}
 
+const answer8 = howManyTimes(wordsCount,'matter');
+console.log(`The number of times word repeated is ${answer8}`);
 
 
 // Iteration #8: Bonus
