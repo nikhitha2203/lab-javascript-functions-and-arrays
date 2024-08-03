@@ -132,14 +132,31 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(words) {
+  return words.filter(function(word, index) {
+    return words.indexOf(word) === index;
+  });
+}
+
+const answer6 = uniquifyArray(words);
+console.log(answer6);
 
 
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(wordsFind,word) {
+    for(let i=0;i<wordsFind.length;i++)
+    {
+      if(wordsFind[i]===word)
+        return true;
+    }
+    return false;
+}
+
+const answer7 = doesWordExist(wordsFind,'eating');
+console.log(answer7 ? "It exists" : "Not exists");
 
 
 
